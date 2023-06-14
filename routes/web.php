@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 //routing 
 Route::get('student-list', [studentController::class, 'index']);
+Route::get('add-student', [studentController::class, 'addStudent']);

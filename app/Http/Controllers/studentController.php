@@ -16,4 +16,13 @@ class studentController extends Controller
        // resources and called a list 
     return view('student-list', compact('data'));
     }
+
+    public function addStudent(){
+        //return "From add student";
+        return view('add-student');
+    }
+
+    public function save(Request $request){
+
+    }
 }
