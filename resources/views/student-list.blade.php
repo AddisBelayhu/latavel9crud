@@ -12,7 +12,7 @@
         <div class="col-md-12">
             <h3>Student List</h3><br>
             <div style="margin-right:5%; float:right; font-size:20px">
-                <a href="{{url('add-student')}}">Add</a>
+                <a href="{{url('add-student')}}" class="btn btn-primary" style="width:120px">Add Student</a>
             </div><br>
             <br>
             <table class="table">
@@ -43,7 +43,7 @@
             </tbody>
             
         </table>
-                         
+                       
 
         </div>
     </div>

@@ -22,7 +22,19 @@ class studentController extends Controller
         return view('add-student');
     }
 
-    public function save(Request $request){
+    public function saveStudent(Request $request){
+      //dd($request->all());
+      $name = $request->name;
+      $email = $request->email;
+      $phone = $request->phone;
+      $address = $request->address;
+
+      //create student model
+      $stu = new Student();
+      $stu->name = $name;
+      $stu->email = $email;
+      $stu->phone = $phone;
+      $stu->address = $address;
 
     }
 }

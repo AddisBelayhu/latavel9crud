@@ -19,15 +19,11 @@
                 </div>
                 <div class="md-3">
                     <label class="form-label">Email:</label>
-                    <input type="text" class="form-control" name="email" placeholder="Enter Your Email" autocomplete="off">
+                    <input type="email" class="form-control" name="email" placeholder="Enter Your Email" autocomplete="off">
                 </div>
                 <div class="md-3">
                     <label class="form-label">Phone:</label>
                     <input type="text" class="form-control" name="phone" placeholder="Enter Your Phone" autocomplete="off">
-                </div>
-                <div class="md-3">
-                    <label class="form-label">Email:</label>
-                    <input type="email" class="form-control" name="email" placeholder="Enter Your Email" autocomplete="off">
                 </div>
                 <div class="md-3">
                     <label class="form-label">Address:</label>
@@ -35,7 +31,7 @@
                 </div>
                 <br><br>
                 <button type="submit" class="btn btn-primary" style="width:80px">Submit</button> &nbsp;&nbsp;
-                <a href="" class="btn btn-danger" style="width:80px">Back</a>
+                <a href="{{url('student-list')}}" class="btn btn-danger" style="width:80px">Back</a>
               </form>
             </div>
         </div>
