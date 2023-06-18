@@ -10,14 +10,15 @@
     <div class="container" style="margin-top:60px">
         <div class="row">
             <div class="col-md-12">
-              <h3>Add Student Data</h3>
+              <h3>Edit Student Data</h3>
               @if(Session::has('success'))
               <div class="alert alert-success" role="alert">
                 {{Session::get('success')}}
               </div>
               @endif
-              <form  method="post" action="{{url('save-student')}}">
+              <form  method="post" action="{{url('edit-student')}}">
                 @csrf 
+                <input type="hidden" name="id" value="{{$data->id}}">
                 <div class="md-3">
                     <label class="form-label">Name:</label>
                     <input type="text" class="form-control" name="name" placeholder="Enter Your Name" 
@@ -59,7 +60,7 @@
                     @enderror
                 </div>
                 <br><br>
-                <button type="submit" class="btn btn-primary" style="width:80px">Submit</button> &nbsp;&nbsp;
+                <button type="submit" class="btn btn-primary" style="width:80px">Update</button> &nbsp;&nbsp;
                 <a href="{{url('student-list')}}" class="btn btn-danger" style="width:100px">Show list</a>
               </form>
             </div>
