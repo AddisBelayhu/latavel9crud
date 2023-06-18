@@ -51,7 +51,7 @@
                 <div class="md-3">
                     <label class="form-label">Address:</label>
                     <textarea class="form-control" name="address" placeholder="Enter Your Address" 
-                    autocomplete="off" value="{{old('address')}}"></textarea>
+                    autocomplete="off">{{old('address')}}</textarea>
                     @error('address')
                     <div class="alert alert-danger" role="alert">
                      {{$message}}
@@ -60,7 +60,7 @@
                 </div>
                 <br><br>
                 <button type="submit" class="btn btn-primary" style="width:80px">Submit</button> &nbsp;&nbsp;
-                <a href="{{url('student-list')}}" class="btn btn-danger" style="width:100px">Show list</a>
+                <a href="{{url('student-list')}}" class="btn btn-success" style="width:100px">Show list</a>
               </form>
             </div>
         </div>

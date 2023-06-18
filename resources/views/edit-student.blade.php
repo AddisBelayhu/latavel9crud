@@ -16,7 +16,7 @@
                 {{Session::get('success')}}
               </div>
               @endif
-              <form  method="post" action="{{url('edit-student')}}">
+              <form  method="post" action="{{url('update-student')}}">
                 @csrf 
                 <input type="hidden" name="id" value="{{$data->id}}">
                 <div class="md-3">
@@ -52,7 +52,7 @@
                 <div class="md-3">
                     <label class="form-label">Address:</label>
                     <textarea class="form-control" name="address" placeholder="Enter Your Address" 
-                    autocomplete="off" value="{{$data->address}}"></textarea>
+                    autocomplete="off">{{$data->address}}</textarea>
                     @error('address')
                     <div class="alert alert-danger" role="alert">
                      {{$message}}
@@ -61,7 +61,7 @@
                 </div>
                 <br><br>
                 <button type="submit" class="btn btn-primary" style="width:80px">Update</button> &nbsp;&nbsp;
-                <a href="{{url('student-list')}}" class="btn btn-danger" style="width:100px">Show list</a>
+                <a href="{{url('student-list')}}" class="btn btn-success" style="width:100px">Show list</a>
               </form>
             </div>
         </div>

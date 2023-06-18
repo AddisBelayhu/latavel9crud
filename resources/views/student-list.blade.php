@@ -12,9 +12,14 @@
         <div class="col-md-12">
             <h3>Student List</h3><br>
             <div style="margin-right:5%; float:right; font-size:20px">
-                <a href="{{url('add-student')}}" class="btn btn-primary" style="width:120px">Add Student</a>
+                <a href="{{url('add-student')}}" class="btn btn-success" style="width:120px">Add Student</a>
             </div><br>
             <br>
+            @if(Session::has('success'))
+              <div class="alert alert-success" role="alert">
+                {{Session::get('success')}}
+              </div>
+              @endif
             <table class="table">
               <thead><tr>
                     <th>#</th>
@@ -37,7 +42,7 @@
                     <td>{{$studata->email}}</td>
                     <td>{{$studata->phone}}</td>
                     <td>{{$studata->address}}</td>
-                    <td><a href="{{url('edit-student/'.$studata->id)}}" class="btn btn-primary">Edit</a> | Delete</td>
+                    <td><a href="{{url('edit-student/'.$studata->id)}}" class="btn btn-primary">Edit</a> | <a href="{{url('delete-student/'.$studata->id)}}" class="btn btn-danger">Delete</a></td>
                 </tr>
                 @endforeach 
             </tbody>

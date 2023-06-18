@@ -70,13 +70,18 @@ class studentController extends Controller
       $phone = $request->phone;
       $address = $request->address;
 
-      Student::where('id', '=',$id)->update([
+      Student::where('id','=',$id)->update([
        'name'=>$name,
        'email'=>$email,
        'phone'=>$phone,
-       'address'=>$address]);
-        return redirect()->back()->with('success','Updated Added Successfully'); 
+       'address'=>$address]); 
+        return redirect()->back()->with('success','Updated Successfully');  
   }  
+
+  public function deleteStudent($id){
+    Student::where('id','=',$id)->delete();
+    return redirect()->back()->with('success','Deleted Successfully');  
+  }
 }  
 
 
