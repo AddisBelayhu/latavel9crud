@@ -37,7 +37,7 @@
                     <td>{{$studata->email}}</td>
                     <td>{{$studata->phone}}</td>
                     <td>{{$studata->address}}</td>
-                    <td>Edit | Delete</td>
+                    <td><a href="{{url('edit-student/'.$studata->id)}}" class="btn btn-primary">Edit</a> | Delete</td>
                 </tr>
                 @endforeach 
             </tbody>
@@ -47,6 +47,8 @@
 
         </div>
     </div>
+    <p style="font-family: 'Courier New', Courier, monospace"><abbr title="Moa Acadamy of Execellence">MAoE</abbr> is a pioneer school founded in 1978 aiming to provide 
+        quality education for the community with affordable price. </p>
 </div>
 
     

@@ -23,6 +23,14 @@ class studentController extends Controller
     }
 
     public function saveStudent(Request $request){
+    //set validation
+    $request->validate([
+      'name'=>'required',
+      'email'=>'required|email',
+      'phone'=>'required',
+      'address'=>'required',
+
+    ]);
       //dd($request->all());
       $name = $request->name;
       $email = $request->email;
@@ -35,6 +43,18 @@ class studentController extends Controller
       $stu->email = $email;
       $stu->phone = $phone;
       $stu->address = $address;
+      $stu->save();
+
+      return redirect()->back()->with('success','Student Added Successfully');
+    }
+
+    public function editStudent($id){
+      /* to feach all data
+      $data = Student::get();
+      return $data;*/
+      // to feach json single data
+      $data = Student::where('id','=',$id)->first();
+      return $data;
 
     }
 }

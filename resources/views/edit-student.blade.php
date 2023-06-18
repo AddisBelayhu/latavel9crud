@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>Add Student </title>
+    <title>Edit Student </title>
 </head>
 <body>
     <div class="container" style="margin-top:60px">
@@ -21,7 +21,7 @@
                 <div class="md-3">
                     <label class="form-label">Name:</label>
                     <input type="text" class="form-control" name="name" placeholder="Enter Your Name" 
-                    autocomplete="off" value="{{old('name')}}">
+                    autocomplete="off" value="{{$data->name}}">
                    @error('name')
                    <div class="alert alert-danger" role="alert">
                     {{$message}}
@@ -31,7 +31,7 @@
                 <div class="md-3">
                     <label class="form-label">Email:</label>
                     <input type="email" class="form-control" name="email" placeholder="Enter Your Email" 
-                    autocomplete="off" value="{{old('email')}}">
+                    autocomplete="off" value="{{$data->email}}">
                     @error('email')
                     <div class="alert alert-danger" role="alert">
                      {{$message}}
@@ -41,7 +41,7 @@
                 <div class="md-3">
                     <label class="form-label">Phone:</label>
                     <input type="text" class="form-control" name="phone" placeholder="Enter Your Phone" 
-                    autocomplete="off" value="{{old('phone')}}" >
+                    autocomplete="off" value="{{$data->phone}}" >
                     @error('phone')
                     <div class="alert alert-danger" role="alert">
                      {{$message}}
@@ -51,7 +51,7 @@
                 <div class="md-3">
                     <label class="form-label">Address:</label>
                     <textarea class="form-control" name="address" placeholder="Enter Your Address" 
-                    autocomplete="off" value="{{old('address')}}"></textarea>
+                    autocomplete="off" value="{{$data->address}}"></textarea>
                     @error('address')
                     <div class="alert alert-danger" role="alert">
                      {{$message}}
