@@ -8,10 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>student list form</title>
 </head>
-<body style="background-color: rgb(251, 251, 251)">
+<body style="background-color: #edf1f5;">
 <div class="container" style="margin-top:60px">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" style="box-shadow: 5px 10px 18px #888888; border-radius:5px">
             <h3>Student List</h3><br>
             <div style="margin-right:5%; float:right; font-size:20px">
                 <a href="{{url('add-student')}}" class="btn btn-success" style="width:120px">Add Student</a>
@@ -22,7 +22,7 @@
                 {{Session::get('success')}}
               </div>
               @endif
-            <table class="table table-striped">
+            <table class="table table-striped"  style="box-shadow: 0px 0.2px 0.2px 0.2px">
               <thead ><tr>
                     <th style="background-color:rgb(236, 236, 236)">#</th>
                     <th style="background-color:rgb(236, 236, 236)">Name</th>
@@ -53,8 +53,8 @@
                        
 
         </div>
-    </div>
-    <p style="font-family: 'Courier New', Courier, monospace"><abbr title="Moa Acadamy of Execellence">MAoE</abbr> is a pioneer school founded in 1978 aiming to provide 
+    </div><br>  
+    <p style="font-family: 'Courier New', Courier, monospace; color:rgb(6, 69, 69)"><abbr title="Moa Acadamy of Execellence">MAoE</abbr> is a pioneer school founded in 1978 aiming to provide 
         quality education for the community with affordable price. </p>
 </div>
 
